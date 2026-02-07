@@ -60,6 +60,22 @@
                 下载Release中的SnapHutaoRemasteringProject CA.cer文件 双击安装证书，保存到受信任的根证书颁发机构，然后下载msix程序包，按照提示完成安装
               </div>
               
+              <div class="alert alert-warning mb-4">
+                <div class="d-flex align-items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#ffc107" class="me-2 flex-shrink-0">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>
+                  <div>
+                    <strong>重要提醒：</strong>
+                    <ul class="mb-0 mt-1">
+                      <li>启动器需要连接到 GitHub 获取更新和功能数据</li>
+                      <li>如果出现功能无法使用或连接问题，推荐使用 <a href="https://steampp.net/" target="_blank" class="alert-link">Watt Toolkit（原名Steam++）</a> 加速器</li>
+                      <li>Watt Toolkit 可以加速 GitHub 访问，解决网络连接问题</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
               <div class="border-top pt-3">
                 <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases" 
                    target="_blank" 

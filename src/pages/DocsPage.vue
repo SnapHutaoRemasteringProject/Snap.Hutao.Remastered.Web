@@ -25,6 +25,33 @@
               </div>
               
               <div class="mt-4">
+                <h6 class="card-title mb-3">重要页面</h6>
+                <div class="list-group list-group-flush">
+                  <router-link to="/statements/tos" class="list-group-item list-group-item-action">
+                    服务条款
+                  </router-link>
+                  <router-link to="/statements/privacy-notice" class="list-group-item list-group-item-action">
+                    隐私政策
+                  </router-link>
+                  <router-link to="/statements/bug-report" class="list-group-item list-group-item-action">
+                    错误报告
+                  </router-link>
+                  <router-link to="/statements/latest" class="list-group-item list-group-item-action">
+                    最新声明
+                  </router-link>
+                  <router-link to="/download" class="list-group-item list-group-item-action">
+                    下载页面
+                  </router-link>
+                  <router-link to="/features/dashboard" class="list-group-item list-group-item-action">
+                    仪表板功能
+                  </router-link>
+                  <router-link to="/features" class="list-group-item list-group-item-action">
+                    所有功能
+                  </router-link>
+                </div>
+              </div>
+              
+              <div class="mt-4">
                 <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered" 
                    target="_blank" 
                    class="btn btn-outline-primary w-100 mb-2">

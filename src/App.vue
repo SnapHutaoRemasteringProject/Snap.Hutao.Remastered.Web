@@ -14,7 +14,7 @@ import NavBar from './components/layout/NavBar.vue'
         <div class="row">
           <div class="col-lg-4 mb-4">
             <div class="d-flex align-items-center mb-3">
-              <img src="/public/logo.png" alt="Snap.Hutao.Remastered Logo" class="me-3" style="height: 40px; width: 40px;">
+              <img src="/logo.png" alt="Snap.Hutao.Remastered Logo" class="me-3" style="height: 40px; width: 40px;">
               <div>
                 <h5 class="fw-bold mb-0">Snap.Hutao.Remastered</h5>
                 <p class="text-muted mb-0">胡桃重制版</p>
@@ -32,6 +32,16 @@ import NavBar from './components/layout/NavBar.vue'
               <li class="mb-2"><a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered" 
                  target="_blank" 
                  class="text-white text-decoration-none">GitHub</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="fw-bold mb-3">声明页面</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><router-link to="/statements/latest" class="text-white text-decoration-none">最新声明</router-link></li>
+              <li class="mb-2"><router-link to="/statements/tos" class="text-white text-decoration-none">服务条款</router-link></li>
+              <li class="mb-2"><router-link to="/statements/privacy-notice" class="text-white text-decoration-none">隐私政策</router-link></li>
+              <li class="mb-2"><router-link to="/statements/bug-report" class="text-white text-decoration-none">错误报告</router-link></li>
             </ul>
           </div>
           

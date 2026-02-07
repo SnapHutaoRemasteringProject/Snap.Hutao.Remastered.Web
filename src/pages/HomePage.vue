@@ -7,7 +7,7 @@
           <div class="card border-0 shadow-lg">
             <div class="card-body p-4 text-center">
               <div class="mb-3">
-                <img src="/public/logo.png" alt="Snap.Hutao.Remastered Logo" class="me-3" style="height: 128px; width: 128px;">
+                <img src="/logo.png" alt="Snap.Hutao.Remastered Logo" class="me-3" style="height: 128px; width: 128px;">
               </div>
               <h3 class="card-title mb-3">Snap.Hutao.Remastered</h3>
               <p class="card-text">现代化的原神工具</p>

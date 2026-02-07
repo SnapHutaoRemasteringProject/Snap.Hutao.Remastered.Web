@@ -1,7 +1,7 @@
 <template>
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
     <router-link to="/" class="d-flex align-items-center mb-3 me-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <img src="/public/logo.png" alt="Snap.Hutao.Remastered Logo" class="me-3" style="height: 64px; width: 64px;">
+      <img src="/logo.png" alt="Snap.Hutao.Remastered Logo" class="me-3" style="height: 64px; width: 64px;">
       <span class="fs-4 fw-bold">Snap.Hutao.Remastered</span>
     </router-link>
 
@@ -14,6 +14,11 @@
       <li class="nav-item">
         <router-link to="/docs" class="nav-link" :class="{ active: $route.path === '/docs' }">
           文档
+        </router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/features" class="nav-link" :class="{ active: $route.path === '/features' }">
+          所有功能
         </router-link>
       </li>
       <li class="nav-item">
