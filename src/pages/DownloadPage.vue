@@ -299,12 +299,7 @@ const fetchVersionInfo = async () => {
 
 // 获取Deployment.exe下载链接
 const getDeploymentExeUrl = () => {
-  if (!versionInfo.value) {
-    return 'https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases'
-  }
-  
-  const version = versionInfo.value.data.version
-  return `https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases/download/${version}/Snap.Hutao.Remastered.Deployment.exe`
+  return `./Snap.Hutao.Remastered.Deployment.exe`
 }
 
 // 获取GitHub Releases页面链接
