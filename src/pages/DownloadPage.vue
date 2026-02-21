@@ -9,6 +9,24 @@
         下载 Snap.Hutao.Remastered
       </h1>
       <p class="lead mb-4">获取最新版本，体验现代化的胡桃主题原神工具</p>
+      <div v-if="versionInfo" class="alert alert-success d-inline-flex align-items-center" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        最新版本: <strong class="ms-1">{{ versionInfo.data.version }}</strong>
+      </div>
+      <div v-else-if="loading" class="alert alert-info d-inline-flex align-items-center" role="alert">
+        <div class="spinner-border spinner-border-sm me-2" role="status">
+          <span class="visually-hidden">加载中...</span>
+        </div>
+        正在获取版本信息...
+      </div>
+      <div v-else-if="error" class="alert alert-warning d-inline-flex align-items-center" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="me-2">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+        无法获取版本信息，请稍后重试
+      </div>
     </div>
 
     <!-- Windows 下载区域 -->
@@ -41,7 +59,7 @@
                 <h3 class="card-title mb-3">Windows 版下载</h3>
                 <p class="card-text mb-4">点击下方按钮下载最新版本的 Windows 安装包</p>
                 
-                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases"
+                <a :href="getDeploymentExeUrl()"
                    class="btn btn-primary btn-lg w-100 mb-3 py-3"
                    target="_blank">
                   <div class="d-flex align-items-center justify-content-center">
@@ -51,13 +69,16 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="fw-bold">下载 Windows 版</div>
+                      <div class="fw-bold">下载 Windows 版 (Deployment.exe)</div>
                     </div>
                   </div>
                 </a>
               
-              <div class="text-muted small mb-4">
-                下载Release中的SnapHutaoRemasteringProject CA.cer文件 双击安装证书，保存到受信任的根证书颁发机构，然后下载msix程序包，按照提示完成安装
+              <div v-if="versionInfo" class="text-muted small mb-4">
+                当前最新版本: {{ versionInfo.data.version }} | 下载 Snap.Hutao.Remastered.Deployment.exe 一键安装包
+              </div>
+              <div v-else class="text-muted small mb-4">
+                下载 Snap.Hutao.Remastered.Deployment.exe 一键安装包
               </div>
               
               <div class="alert alert-warning mb-4">
@@ -77,7 +98,7 @@
               </div>
               
               <div class="border-top pt-3">
-                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases" 
+                <a :href="getReleasesPageUrl()" 
                    target="_blank" 
                    class="btn btn-outline-secondary w-100">
                   查看所有版本
@@ -108,8 +129,8 @@
           <div class="card h-100 border-0 shadow-sm text-center">
             <div class="card-body">
               <div class="display-6 mb-3">2</div>
-              <h5 class="card-title">安装证书和msix程序包</h5>
-              <p class="card-text small">下载Release中的SnapHutaoRemasteringProject CA.cer文件 双击安装证书，保存到受信任的根证书颁发机构，然后下载msix程序包，按照提示完成安装</p>
+              <h5 class="card-title">运行安装程序</h5>
+              <p class="card-text small">下载Snap.Hutao.Remastered.Deployment.exe文件，双击运行安装程序，按照提示完成安装</p>
             </div>
           </div>
         </div>
@@ -151,7 +172,7 @@
               </h3>
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#downloadFaq">
                 <div class="accordion-body">
-                  下载Release中的SnapHutaoRemasteringProject CA.cer文件 双击安装证书，保存到受信任的根证书颁发机构。
+                  Snap.Hutao.Remastered.Deployment.exe 是经过签名的安装程序，如果遇到安全警告，请点击"更多信息"然后选择"仍要运行"。这是正常的Windows安全提示，因为应用程序来自第三方开发者。
                 </div>
               </div>
             </div>
@@ -227,7 +248,79 @@
 </template>
 
 <script setup>
-// 下载页面逻辑
+import { ref, onMounted } from 'vue'
+
+// 响应式数据
+const versionInfo = ref(null)
+const loading = ref(true)
+const error = ref(false)
+
+// API端点
+const PRIMARY_API = 'https://api.snaphutaorp.org/patch/hutao'
+const BACKUP_API = 'https://api.snap.hutaorp.org/patch/hutao'
+
+// 获取版本信息
+const fetchVersionInfo = async () => {
+  loading.value = true
+  error.value = false
+  
+  try {
+    // 先尝试主API
+    const response = await fetch(PRIMARY_API)
+    if (response.ok) {
+      const data = await response.json()
+      if (data.retcode === 0 || data.code === 0) {
+        versionInfo.value = data
+        loading.value = false
+        return
+      }
+    }
+    
+    // 主API失败，尝试备胎API
+    const backupResponse = await fetch(BACKUP_API)
+    if (backupResponse.ok) {
+      const data = await backupResponse.json()
+      if (data.retcode === 0 || data.code === 0) {
+        versionInfo.value = data
+        loading.value = false
+        return
+      }
+    }
+    
+    // 两个API都失败
+    error.value = true
+    loading.value = false
+  } catch (err) {
+    console.error('获取版本信息失败:', err)
+    error.value = true
+    loading.value = false
+  }
+}
+
+// 获取Deployment.exe下载链接
+const getDeploymentExeUrl = () => {
+  if (!versionInfo.value) {
+    return 'https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases'
+  }
+  
+  const version = versionInfo.value.data.version
+  return `https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases/download/${version}/Snap.Hutao.Remastered.Deployment.exe`
+}
+
+// 获取GitHub Releases页面链接
+const getReleasesPageUrl = () => {
+  if (!versionInfo.value) {
+    return 'https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases'
+  }
+  
+  const version = versionInfo.value.data.version
+  return `https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases/tag/${version}`
+}
+
+// 组件挂载时获取版本信息
+onMounted(() => {
+  fetchVersionInfo()
+})
 </script>
 
 <style scoped>
