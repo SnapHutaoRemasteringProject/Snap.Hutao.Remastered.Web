@@ -14,35 +14,125 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <!-- 最新公告 -->
-          <div class="card mb-4 border-primary">
+
+          <!-- 版本更新说明 -->
+          <div class="card mb-4 border-success">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start mb-3">
-                <h5 class="card-title mb-0">重要公告</h5>
-                <span class="badge bg-primary">最新</span>
+                <h5 class="card-title mb-0">版本 1.18.4.0 更新说明</h5>
+                <span class="badge bg-success">新版本</span>
               </div>
-              <p class="card-text">
-                <strong>项目维护状态变更：</strong>原开发团队 DGP Studio 已停止运营，
-                Snap.Hutao.Remastered 现由开源社区维护。我们将继续提供更新和支持。
-              </p>
-              <p class="card-text">
-                <strong>免费祈愿记录云存储：</strong>我们正在开发免费的祈愿记录云存储功能，
-                预计在后续版本中推出。这将帮助您安全地备份和同步祈愿记录数据。
-              </p>
-              <p class="card-text">
-                <strong>域名变更通知：</strong>原 hut.ao 域名已变更为 snaphutaorp.org，
-                所有相关链接已更新。如果您遇到任何链接问题，请及时反馈。
-              </p>
-              <div class="alert alert-info mt-3">
-                <strong>社区维护说明：</strong>作为社区维护项目，我们欢迎开发者贡献代码，
-                也期待用户积极参与测试和反馈。项目未来发展将更加透明和开放。
+              <div data-pjax="true" data-test-selector="body-content" data-view-component="true" class="markdown-body">
+                <h1>版本 1.18.4.0 更新说明</h1>
+                <p>本次更新带来了多项社区期待的功能改进与问题修复，特别是<strong>树脂相关功能已正式恢复</strong>，同时针对 HoYoLab 登录、签到稳定性等问题进行了集中处理。以下是详细变更内容。</p>
+                <hr>
+                <h3>✨ 新增功能</h3>
+                <ul>
+                  <li>
+                    <p><strong>领取奖励时支持屏蔽原石领取选项</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4001169417" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/62" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/62/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/62" aria-keyshortcuts="Alt+ArrowUp">#62</a>）<br>
+                    在领取各类奖励时，用户现在可选择屏蔽原石领取，避免误操作消耗原石，提升资源管理的灵活性。</p>
+                  </li>
+                  <li>
+                    <p><strong>优化养成计算的材料添加体验</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4000092033" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/59" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/59/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/59" aria-keyshortcuts="Alt+ArrowUp">#59</a>）<br>
+                    对【养成计算】功能中的材料添加流程进行了重构，现在支持批量选择、快速搜索等便捷操作，大幅提升添加效率。</p>
+                  </li>
+                  <li>
+                    <p><strong>为更多注入模块添加独立开关</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3978445876" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/50" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/50/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/50" aria-keyshortcuts="Alt+ArrowUp">#50</a>）<br>
+                    扩展了注入功能的控制粒度，用户可根据需要在设置中单独启用或禁用特定注入模块，增强可控性。</p>
+                  </li>
+                  <li>
+                    <p><strong>恢复树脂相关功能</strong><br>
+                    经过一段时间的开发与测试，树脂原功能现已正式恢复上线，欢迎体验。</p>
+                  </li>
+                </ul>
+                <hr>
+                <h3>🐛 问题修复</h3>
+                <ul>
+                  <li>
+                    <p><strong>修复 HoYoLab 登录报错问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3991906924" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/55" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/55/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/55" aria-keyshortcuts="Alt+ArrowUp">#55</a>）<br>
+                    解决了因接口变更导致的 HoYoLab 账号登录失败的问题，现在可正常登录并使用相关功能。</p>
+                  </li>
+                  <li>
+                    <p><strong>修复签到功能在当天首次打开时无法正常运行的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3987196975" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/52" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/52/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/52" aria-keyshortcuts="Alt+ArrowUp">#52</a>）<br>
+                    优化了签到逻辑，确保每天首次打开应用时签到功能可正常触发，不再需要手动重试。</p>
+                  </li>
+                  <li>
+                    <p><strong>修复悬浮窗"调整视野"开关与注入选项"视野热开关"不同步的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3977724888" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/49" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/49/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/49" aria-keyshortcuts="Alt+ArrowUp">#49</a>）<br>
+                    现在悬浮窗的"调整视野"启用状态会与注入选项中的"视野热开关"保持一致，操作更加直观。</p>
+                  </li>
+                </ul>
+                <hr>
+                <h3>📦 安装与升级说明</h3>
+                <p>为简化安装流程，我们强烈建议您使用 <strong>Snap.Hutao.Deployment.exe 安装器</strong> 进行安装或升级。该工具将自动完成证书安装与应用更新，无需手动干预。</p>
+                <ul>
+                  <li>如果您仍选择手动安装，请务必提前安装 <strong><a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/raw/refs/heads/main/SnapHutaoRemasteringProject%20CA.cer">项目 CA 证书</a></strong> 至系统"受信任的根证书颁发机构"，否则应用将无法运行。</li>
+                </ul>
+                <hr>
+                <h3><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji> 已知限制</h3>
+                <ul>
+                  <li>帧率解锁功能在"千星奇域"等特定场景下仍然受限，且不可与宏功能同时启用。</li>
+                </ul>
+                <hr>
+                <h3>🙏 致谢</h3>
+                <p>感谢开发贡献者的代码贡献<br>
+                以及所有通过 Issue、讨论区反馈问题和建议的社区成员。</p>
+                <p>如您在使用中遇到任何问题，欢迎通过 <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues">Issues</a> 提交反馈。</p>
+                <p><strong>Full Changelog</strong>: <a class="commit-link" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/compare/1.18.3.0...1.18.4.0"><tt>1.18.3.0...1.18.4.0</tt></a></p>
               </div>
-              <p class="card-text text-muted small">
-                发布时间：2026年2月7日
+              <p class="card-text text-muted small mt-3">
+                发布时间：2026年2月28日
               </p>
             </div>
           </div>
 
+          <!-- 法律声明 -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">法律声明</h5>
+              <p class="card-text">
+                Snap.Hutao.Remastered 是一个第三方开源工具，与米哈游（miHoYo）及其游戏《原神》无任何官方关联。
+                使用本工具前请阅读相关条款。
+              </p>
+              <div class="d-flex gap-2">
+                <router-link to="/statements/tos" class="btn btn-outline-secondary btn-sm">
+                  服务条款
+                </router-link>
+                <router-link to="/statements/privacy-notice" class="btn btn-outline-secondary btn-sm">
+                  隐私政策
+                </router-link>
+              </div>
+            </div>
+          </div>
+
+          <!-- 订阅更新 -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">获取更新通知</h5>
+              <p class="card-text small mb-3">
+                关注 GitHub 仓库或加入社区，及时获取最新版本和功能更新。
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered" 
+                   target="_blank" 
+                   class="btn btn-primary btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-1">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  Star 项目
+                </a>
+                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases" 
+                   target="_blank" 
+                   class="btn btn-outline-primary btn-sm">
+                  查看 Releases
+                </a>
+                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues" 
+                   target="_blank" 
+                   class="btn btn-outline-secondary btn-sm">
+                  提交反馈
+                </a>
+              </div>
+            </div>
+          </div>
 
           <!-- 重要通知 -->
           <div class="card mb-4">
@@ -109,55 +199,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 法律声明 -->
-          <div class="card mb-4">
-            <div class="card-body">
-              <h5 class="card-title">法律声明</h5>
-              <p class="card-text">
-                Snap.Hutao.Remastered 是一个第三方开源工具，与米哈游（miHoYo）及其游戏《原神》无任何官方关联。
-                使用本工具前请阅读相关条款。
-              </p>
-              <div class="d-flex gap-2">
-                <router-link to="/statements/tos" class="btn btn-outline-secondary btn-sm">
-                  服务条款
-                </router-link>
-                <router-link to="/statements/privacy-notice" class="btn btn-outline-secondary btn-sm">
-                  隐私政策
-                </router-link>
-              </div>
-            </div>
-          </div>
-
-          <!-- 订阅更新 -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">获取更新通知</h5>
-              <p class="card-text small mb-3">
-                关注 GitHub 仓库或加入社区，及时获取最新版本和功能更新。
-              </p>
-              <div class="d-flex flex-wrap gap-2">
-                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered" 
-                   target="_blank" 
-                   class="btn btn-primary btn-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-1">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
-                  Star 项目
-                </a>
-                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/releases" 
-                   target="_blank" 
-                   class="btn btn-outline-primary btn-sm">
-                  查看 Releases
-                </a>
-                <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues" 
-                   target="_blank" 
-                   class="btn btn-outline-secondary btn-sm">
-                  提交反馈
-                </a>
               </div>
             </div>
           </div>
