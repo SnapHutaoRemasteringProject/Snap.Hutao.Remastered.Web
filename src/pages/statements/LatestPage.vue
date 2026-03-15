@@ -19,65 +19,60 @@
           <div class="card mb-4 border-success">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start mb-3">
-                <h5 class="card-title mb-0">版本 1.18.4.0 更新说明</h5>
+                <h5 class="card-title mb-0">版本 1.19.0.0 更新说明</h5>
                 <span class="badge bg-success">新版本</span>
               </div>
               <div data-pjax="true" data-test-selector="body-content" data-view-component="true" class="markdown-body">
-                <h1>版本 1.18.4.0 更新说明</h1>
-                <p>本次更新带来了多项社区期待的功能改进与问题修复，特别是<strong>树脂相关功能已正式恢复</strong>，同时针对 HoYoLab 登录、签到稳定性等问题进行了集中处理。以下是详细变更内容。</p>
-                <hr>
-                <h3>✨ 新增功能</h3>
-                <ul>
-                  <li>
-                    <p><strong>领取奖励时支持屏蔽原石领取选项</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4001169417" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/62" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/62/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/62" aria-keyshortcuts="Alt+ArrowUp">#62</a>）<br>
-                    在领取各类奖励时，用户现在可选择屏蔽原石领取，避免误操作消耗原石，提升资源管理的灵活性。</p>
-                  </li>
-                  <li>
-                    <p><strong>优化养成计算的材料添加体验</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4000092033" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/59" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/59/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/59" aria-keyshortcuts="Alt+ArrowUp">#59</a>）<br>
-                    对【养成计算】功能中的材料添加流程进行了重构，现在支持批量选择、快速搜索等便捷操作，大幅提升添加效率。</p>
-                  </li>
-                  <li>
-                    <p><strong>为更多注入模块添加独立开关</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3978445876" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/50" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/50/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/50" aria-keyshortcuts="Alt+ArrowUp">#50</a>）<br>
-                    扩展了注入功能的控制粒度，用户可根据需要在设置中单独启用或禁用特定注入模块，增强可控性。</p>
-                  </li>
-                  <li>
-                    <p><strong>恢复树脂相关功能</strong><br>
-                    经过一段时间的开发与测试，树脂原功能现已正式恢复上线，欢迎体验。</p>
-                  </li>
-                </ul>
-                <hr>
-                <h3>🐛 问题修复</h3>
-                <ul>
-                  <li>
-                    <p><strong>修复 HoYoLab 登录报错问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3991906924" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/55" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/55/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/55" aria-keyshortcuts="Alt+ArrowUp">#55</a>）<br>
-                    解决了因接口变更导致的 HoYoLab 账号登录失败的问题，现在可正常登录并使用相关功能。</p>
-                  </li>
-                  <li>
-                    <p><strong>修复签到功能在当天首次打开时无法正常运行的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3987196975" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/52" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/52/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/52" aria-keyshortcuts="Alt+ArrowUp">#52</a>）<br>
-                    优化了签到逻辑，确保每天首次打开应用时签到功能可正常触发，不再需要手动重试。</p>
-                  </li>
-                  <li>
-                    <p><strong>修复悬浮窗"调整视野"开关与注入选项"视野热开关"不同步的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3977724888" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/49" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/49/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/49" aria-keyshortcuts="Alt+ArrowUp">#49</a>）<br>
-                    现在悬浮窗的"调整视野"启用状态会与注入选项中的"视野热开关"保持一致，操作更加直观。</p>
-                  </li>
-                </ul>
-                <hr>
-                <h3>📦 安装与升级说明</h3>
-                <p>为简化安装流程，我们强烈建议您使用 <strong>Snap.Hutao.Deployment.exe 安装器</strong> 进行安装或升级。该工具将自动完成证书安装与应用更新，无需手动干预。</p>
-                <ul>
-                  <li>如果您仍选择手动安装，请务必提前安装 <strong><a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/raw/refs/heads/main/SnapHutaoRemasteringProject%20CA.cer">项目 CA 证书</a></strong> 至系统"受信任的根证书颁发机构"，否则应用将无法运行。</li>
-                </ul>
-                <hr>
-                <h3><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji> 已知限制</h3>
-                <ul>
-                  <li>帧率解锁功能在"千星奇域"等特定场景下仍然受限，且不可与宏功能同时启用。</li>
-                </ul>
-                <hr>
-                <h3>🙏 致谢</h3>
-                <p>感谢开发贡献者的代码贡献<br>
-                以及所有通过 Issue、讨论区反馈问题和建议的社区成员。</p>
-                <p>如您在使用中遇到任何问题，欢迎通过 <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues">Issues</a> 提交反馈。</p>
-                <p><strong>Full Changelog</strong>: <a class="commit-link" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/compare/1.18.3.0...1.18.4.0"><tt>1.18.3.0...1.18.4.0</tt></a></p>
+                <h1>版本 1.19.0.0 更新说明</h1>
+<p>本次更新主要针对近期社区反馈的多项问题进行了集中修复，同时对部分流程进行了优化，以提升整体使用体验。以下是详细变更内容。</p>
+<hr>
+<h3>🐛 问题修复</h3>
+<ul>
+<li>
+<p><strong>修复 stoken 刷新时颂愿记录重复导入全部抽卡记录的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3907262821" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/7" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/7/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/7" aria-keyshortcuts="Alt+ArrowUp">#7</a>）<br>
+解决了在通过 stoken 刷新数据时，颂愿记录模块异常重复导入全部祈愿历史的问题，现在数据同步更加准确可靠。</p>
+</li>
+<li>
+<p><strong>修复版本更新时二次点击"检查更新"按钮导致进度条异常抖动的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4007191303" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/67" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/67/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/67" aria-keyshortcuts="Alt+ArrowUp">#67</a>）<br>
+优化了更新界面的交互逻辑，避免连续点击检查按钮时进度条出现抖动或显示异常。</p>
+</li>
+<li>
+<p><strong>修复"更新无反应"的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4004284785" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/64" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/64/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/64" aria-keyshortcuts="Alt+ArrowUp">#64</a>）<br>
+解决了部分用户在点击更新后程序无响应或更新流程无法正常启动的缺陷，确保自动更新功能稳定可用。</p>
+</li>
+</ul>
+<hr>
+<h3>✨ 功能优化与调整</h3>
+<ul>
+<li><strong>移除调整时间过程</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4006073336" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/66" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/66/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/66" aria-keyshortcuts="Alt+ArrowUp">#66</a>）<br>
+为简化操作流程，移除了原有的"调整时间"功能。</li>
+</ul>
+<hr>
+<h3>📦 安装与升级说明</h3>
+<p>为简化安装流程，我们强烈建议您使用 <strong>Snap.Hutao.Deployment.exe 安装器</strong> 进行安装或升级。该工具将自动完成证书安装与应用更新，无需手动干预。</p>
+<ul>
+<li>如果您仍选择手动安装，请务必提前安装 <strong><a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/raw/refs/heads/main/SnapHutaoRemasteringProject%20CA.cer">项目 CA 证书</a></strong> 至系统"受信任的根证书颁发机构"，否则应用将无法运行。</li>
+</ul>
+<hr>
+<h3><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji> 已知限制</h3>
+<ul>
+<li>帧率解锁功能在"千星奇域"等特定场景下仍然受限，且不可与宏功能同时启用。</li>
+</ul>
+<hr>
+<h3>🙏 致谢</h3>
+<p>感谢开发者的代码贡献：<br>
+以及所有通过 Issue、讨论区反馈问题和建议的社区成员。</p>
+<p>如您在使用中遇到任何问题，欢迎通过 <a href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues">Issues</a> 提交反馈。</p>
+<hr>
+<h2>What's Changed</h2>
+<ul>
+<li>优化右键【养成计算】 by <a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/jidingcai/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/jidingcai" aria-keyshortcuts="Alt+ArrowUp">@jidingcai</a> in <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4016797966" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/70" data-hovercard-type="pull_request" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/pull/70/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/pull/70" aria-keyshortcuts="Alt+ArrowUp">#70</a></li>
+</ul>
+<h2>New Contributors</h2>
+<ul>
+<li><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/jidingcai/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/jidingcai" aria-keyshortcuts="Alt+ArrowUp">@jidingcai</a> made their first contribution in <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="4016797966" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/70" data-hovercard-type="pull_request" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/pull/70/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/pull/70" aria-keyshortcuts="Alt+ArrowUp">#70</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a class="commit-link" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/compare/1.18.4.0...1.19.0.0"><tt>1.18.4.0...1.19.0.0</tt></a></p>
               </div>
               <p class="card-text text-muted small mt-3">
                 发布时间：2026年2月28日
