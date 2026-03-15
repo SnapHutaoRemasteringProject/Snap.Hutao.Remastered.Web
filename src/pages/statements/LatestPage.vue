@@ -29,7 +29,7 @@
   <h3>🐛 问题修复</h3>
   <ul>
   <li>
-  <p><strong>修复 stoken 刷新时颂愿记录重复导入全部抽卡记录的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3907262821" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/74" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/7/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/7" aria-keyshortcuts="Alt+ArrowUp">#7</a>）<br>
+  <p><strong>修复 stoken 刷新时颂愿记录重复导入全部抽卡记录的问题</strong>（<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3907262821" data-permission-text="Title is private" data-url="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/74" data-hovercard-type="issue" data-hovercard-url="/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/74/hovercard" href="https://github.com/SnapHutaoRemasteringProject/Snap.Hutao.Remastered/issues/74" aria-keyshortcuts="Alt+ArrowUp">#74</a>）<br>
   解决了在通过 stoken 刷新数据时，颂愿记录模块异常重复导入全部祈愿历史的问题，现在数据同步更加准确可靠。</p>
   </li>
   <li>
